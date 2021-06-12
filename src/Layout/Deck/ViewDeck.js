@@ -84,7 +84,7 @@ function ViewDeck({ decks, setDecks }) {
       </Route>
 
       <Route path={`${path}`}>
-        <Breadcrumbs decks={decks} />
+        {/* <Breadcrumbs decks={decks} /> */}
         <DeckView deck={deck} url={url} decks={decks} setDecks={setDecks} />
         <CardList 
             decks={decks}

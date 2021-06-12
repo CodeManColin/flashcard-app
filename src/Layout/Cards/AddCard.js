@@ -14,8 +14,10 @@ function AddCard({
   setCards,
 }) {
   return (
+    
     <div>
       <Breadcrumbs decks={decks} />
+      
       <h2>{deck.name}: Add Card</h2>
      
       <AddCardForm
@@ -27,8 +29,10 @@ function AddCard({
         cards={cards}
         setCards={setCards}
       />
+      
     </div>
+    
   );
     }
-  
+   
 export default AddCard;
