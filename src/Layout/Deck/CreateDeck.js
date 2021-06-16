@@ -5,7 +5,7 @@ import CreateDeckForm from '../Forms/CreateDeckForm'
 
 
 function CreateDeck({ decks, setDecks }) {
-    
+    // console.log(decks);
   return (
     <div>
       <Breadcrumbs decks={decks} />

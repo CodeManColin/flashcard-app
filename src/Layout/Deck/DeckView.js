@@ -30,7 +30,7 @@ function DeckView({ deck, url, decks, setDecks }) {
             <div className="d-flex justify-content-between ">
               <h5 className="card-title">{deck.name3}</h5>
             </div>
-            <div class="card-text"> 
+            <div className="card-text"> 
         </div>
             <p>{deck.name}</p>
           

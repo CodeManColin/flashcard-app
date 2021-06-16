@@ -20,11 +20,11 @@ function ViewDeck({ decks, setDecks }) {
 
   let deckId;
   for (let param in params) {
-    if (params === deckId) {
+    if (param === "deckId") {
       deckId = params[param];
     }
   }
-
+// console.log(deckId)
   useEffect(() => {
     const abortController = new AbortController();
     readDeck(deckId, abortController.signal)

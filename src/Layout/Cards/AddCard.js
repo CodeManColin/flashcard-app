@@ -11,14 +11,16 @@ function AddCard({
   deckUrl,
   setDecks,
   cards,
-  setCards,
-}) {
+  setCards}) 
+{
+  console.log(deck.name)
   return (
     
     <div>
       <Breadcrumbs decks={decks} />
       
       <h2>{deck.name}: Add Card</h2>
+    
      
       <AddCardForm
         deck={deck}

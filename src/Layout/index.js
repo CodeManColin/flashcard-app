@@ -10,6 +10,7 @@ import CreateDeck from "./Deck/CreateDeck";
 
 function Layout() {
   const [decks, setDecks] = useState([]);
+  // console.log(decks)
   return (
     <div>
       <Header />

@@ -24,6 +24,11 @@
       "name": "",
       "description": "",
       "id": 5
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 6
     }
   ],
   "cards": [
@@ -63,6 +68,12 @@
       "back": "b",
       "deckId": 1,
       "id": 7
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 8
     }
   ]
 }

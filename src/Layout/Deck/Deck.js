@@ -24,7 +24,7 @@ function Deck({ deck, decks, setDecks }) {
   function handleOnClick(event) {
     const abortController = new AbortController();
     event.preventDefault();
-    if (window.confirm("You sure you want to delete Deck?")) {
+    if (window.confirm("Are you sure you want to delete Deck?")) {
       deleteDeck(deck.id, abortController.signal)
         .then((response) => {
           const tempDecks = decks.filter((theDeck) => theDeck.id !== deck.id);
