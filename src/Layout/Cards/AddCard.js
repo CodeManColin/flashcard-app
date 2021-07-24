@@ -13,7 +13,7 @@ function AddCard({
   cards,
   setCards}) 
 {
-  console.log(deck.name)
+  // console.log(deck.name)
   return (
     
     <div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch, useParams, useRouteMatch } from "react-router-dom";
 
 import StudyDeck from "./StudyDeck";
 import EditDeck from "./EditDeck";
 import AddCard from "../Cards/AddCard";
 import EditCard from "../Cards/EditCard";
-import Breadcrumbs from "../Breadcrumbs";
+// import Breadcrumbs from "../Breadcrumbs";
 import DeckView from "./DeckView";
 import CardList from "../Cards/CardList";
 
@@ -18,16 +18,24 @@ function ViewDeck({ decks, setDecks }) {
   const [deck, setDeck] = useState({})
   const [cards, setCards] = useState([]);
 
-  let deckId;
+  let deckId = useParams();
   for (let param in params) {
     if (param === "deckId") {
+      console.log(deckId);
       deckId = params[param];
+      // let deckIdStringified = params[param];
+      
+      // deckId = parseInt(deckIdStringified);
+      // console.log(deckId, typeof(deckId));
     }
   }
-// console.log(deckId)
+  // console.log("in viewDeck", decks);
+
+
   useEffect(() => {
     const abortController = new AbortController();
-    readDeck(deckId, abortController.signal)
+    //  console.log(deckId);
+    readDeck(parseInt(deckId), abortController.signal)
       .then(setDeck)
       .then(() => {
         if (deck.cards !== undefined) setCards([...deck.cards]);
@@ -52,7 +60,6 @@ function ViewDeck({ decks, setDecks }) {
             deck={deck}
             setDeck={setDeck}
             deckUrl={url}
-            setDecks={setDecks}
             cards={cards}
             setCards={setCards}/>
       </Route>
@@ -64,7 +71,6 @@ function ViewDeck({ decks, setDecks }) {
             deck={deck}
             setDeck={setDeck}
             deckUrl={url}
-          
             cards={cards}
             setCards={setCards} />
       </Route>
@@ -93,7 +99,7 @@ function ViewDeck({ decks, setDecks }) {
             setDeck={setDeck} 
             cards={cards}
             setCards={setCards}
-            deckId={deckId}/>
+            deckId={parseInt(deckId.deckId)}/>
       </Route>
 
       <Switch />

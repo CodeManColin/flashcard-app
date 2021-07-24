@@ -19,11 +19,13 @@ function DeckView({ deck, url, decks, setDecks }) {
           setDecks(() => tempDecks);
           history.push(`/`);
         })
-        .catch(console.log("Bad magnitude 10"));
+        .catch(console.log("Error occurred"));
     }
+    
 
     return () => abortController.abort();
   }
+  // console.log("deck.name3", deck.name3); 
     return (
         <div className="card border-0">
           <div className="card-body px-0">
@@ -32,7 +34,7 @@ function DeckView({ deck, url, decks, setDecks }) {
             </div>
             <div className="card-text"> 
         </div>
-            <p>{deck.name}</p>
+            <p>{deck.name3}</p>
           
             <Link
               to={`${url}/edit`}

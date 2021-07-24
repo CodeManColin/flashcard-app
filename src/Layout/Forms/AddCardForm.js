@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory, useRouteMatch } from "react-router-dom";
 import { updateCard, createCard, readCard } from "../../utils/api";
 
-export default function CardForm({
+export default function AddCardForm({
   decks,
   setDecks,
   deck,
@@ -18,13 +18,15 @@ export default function CardForm({
   const [edit, setEdit] = useState(false);
   let decksTemp = decks;
   const deckTemp = deck;
-  // if edit then setFormdata to current card using card id from url
+  // if edit, then setFormdata to current card using card id from url
   useEffect(() => {
     if (subUrls[subUrls.length - 1] === "edit") {
       setEdit(true);
       readCard(subUrls[subUrls.length - 2])
         .then(setFormData)
-        .catch(console.log("Bad magnitude 10"));
+        .catch((error) => {
+          console.log(error)
+        })
     }
   }, []);
 
@@ -44,28 +46,29 @@ export default function CardForm({
       handleFunction = updateCard;
     }
     handleFunction(...theArguments) 
-
       .then((response) => {
         deckTemp.cards = deckTemp.cards.filter(
           (card) => card.id !== response.id
         );
-        // console.log(`Before ::::: ${deckTemp.cards}`);
+        // console.log("Before :::::", deckTemp.cards);
         deckTemp.cards.push(response);
-        setDeck({ ...deckTemp });
-        // console.log(`After ::::: ${deckTemp.cards}`);
+        setDeck({ ...deckTemp })
+        // console.log("After :::::", deckTemp.cards);
       })
       .then(() => {
-        decksTemp = decksTemp.filter((theDeck) => theDeck.id !== deck.id);
-        decksTemp.push(deckTemp);
+        let decksTempOutput = decksTemp.filter((theDeck) => theDeck.id !== deck.id);
+        
+        console.log("addCardForm", decksTempOutput);
+        decksTemp.push(decksTempOutput);
         setDecks([...decksTemp]);
         if (!edit) {
           setFormData({ front: "", back: "" });
         } else {
           history.push(deckUrl);
         }
-        // if edit got to view screen
+        // if edit, go to view screen
       })
-      .catch(console.log("Error"));
+      .catch(error => console.log(error));
     return () => abortController.abort();
   }
   return (

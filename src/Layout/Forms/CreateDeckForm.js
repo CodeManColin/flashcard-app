@@ -15,9 +15,13 @@ function CreateDeckForm({ decks, setDecks }) {
   const handleDescriptionChange = (event) => setDescription(event.target.value);
   const handleNameChange = (event) => setName(event.target.value);
   const history = useHistory();
+  
+  
   useEffect(() => {
     setNewDeck({ name: name, description: description });
   }, [name, description]);
+
+
   function submitHandler(event) {
     event.preventDefault();
     const abortController = new AbortController();
@@ -27,9 +31,14 @@ function CreateDeckForm({ decks, setDecks }) {
         setDecks(() => newDecks);
         history.push(`/decks/${response.id}`);
       })
-      .catch(console.log("Bad magnitude 10"));
+      // .catch(console.log("Bad Error))
+      .catch((error) => {
+        console.log(error)
+      })
     return () => abortController.abort();
   }
+
+  
   return (
     <form name="createDeck" onSubmit={submitHandler}>
       <div className="form-group">

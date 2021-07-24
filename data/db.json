@@ -1,9 +1,9 @@
 {
   "decks": [
     {
-      "id": 1,
       "name": "Rendering in React",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. ",
+      "id": 1
     },
     {
       "name": "React Router",
@@ -11,24 +11,9 @@
       "id": 2
     },
     {
-      "name": "",
-      "description": "",
-      "id": 3
-    },
-    {
-      "name": "",
-      "description": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "description": "",
+      "name": "Mock Deck 3",
+      "description": "Description of Mock Deck 3",
       "id": 5
-    },
-    {
-      "name": "",
-      "description": "",
-      "id": 6
     }
   ],
   "cards": [
@@ -63,17 +48,112 @@
       "id": 5
     },
     {
-      "cards": [],
-      "front": "b",
-      "back": "b",
-      "deckId": 1,
+      "front": "Front stuffddddd",
+      "back": "Back stuffxxxxxxxccc",
+      "deckId": 3,
       "id": 7
+    },
+    {
+      "front": "More from stuffdddd",
+      "back": "More back stuff",
+      "deckId": 3,
+      "id": 8
+    },
+    {
+      "front": "Adding another carddddd",
+      "back": "Back stuff on another cardddddffff",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "ewewsw",
+      "back": "dedwdwe",
+      "deckId": 3,
+      "id": 11
+    },
+    {
+      "front": "dddd",
+      "back": "dddd",
+      "deckId": 3,
+      "id": 12
+    },
+    {
+      "front": "ADDing new car FRONT",
+      "back": "ADDing new car BACK",
+      "deckId": 3,
+      "id": 13
+    },
+    {
+      "front": "c",
+      "back": "c",
+      "deckId": 3,
+      "id": 14
+    },
+    {
+      "front": "c",
+      "back": "wewsw",
+      "deckId": 3,
+      "id": 15
+    },
+    {
+      "front": "new FRON",
+      "back": "new BACK",
+      "deckId": 1,
+      "id": 17
+    },
+    {
+      "front": "new FRONT",
+      "back": "new BACK",
+      "deckId": null,
+      "id": 18
+    },
+    {
+      "front": "FRONT 1234",
+      "back": "BACK 1234",
+      "deckId": 1,
+      "id": 19
+    },
+    {
+      "front": "dddd",
+      "back": "dddd",
+      "deckId": 4,
+      "id": 20
     },
     {
       "front": "",
       "back": "",
+      "deckId": 4,
+      "id": 21
+    },
+    {
+      "front": "d",
+      "back": "s",
       "deckId": 1,
-      "id": 8
+      "id": 22
+    },
+    {
+      "front": "FRONT of Mock Deck 3 card-1",
+      "back": "BACK of Mock Deck 3 card-1",
+      "deckId": 5,
+      "id": 23
+    },
+    {
+      "front": "FRONT of Mock Deck 3 card-2",
+      "back": "BACK of Mock Deck 3 card-2",
+      "deckId": 5,
+      "id": 24
+    },
+    {
+      "front": "FRONT of Mock Deck 3 card-3",
+      "back": "BACK of Mock Deck 3 card-3",
+      "deckId": 5,
+      "id": 25
+    },
+    {
+      "front": "What is a Route Parameter?",
+      "back": "A placeholder in the URL using a colon",
+      "deckId": 2,
+      "id": 26
     }
   ]
 }

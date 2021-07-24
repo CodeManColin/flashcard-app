@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 
 
 import { deleteDeck } from "../../utils/api/index";
-import DeckList from "./DeckList";
+
 
 
 function Deck({ deck, decks, setDecks }) {
@@ -16,10 +16,10 @@ function Deck({ deck, decks, setDecks }) {
   }
 
   if (deck.name !== undefined) {
-    console.log(deck.name)
+    // console.log(deck.name)
   }
   
-  const cardCount = length;
+  const cardLength = length;
   
   function handleOnClick(event) {
     const abortController = new AbortController();
@@ -27,6 +27,7 @@ function Deck({ deck, decks, setDecks }) {
     if (window.confirm("Are you sure you want to delete Deck?")) {
       deleteDeck(deck.id, abortController.signal)
         .then((response) => {
+          // console.log("Deck.js", tempDecks)
           const tempDecks = decks.filter((theDeck) => theDeck.id !== deck.id);
           setDecks(() => tempDecks);
           history.push(`/`);
@@ -38,7 +39,7 @@ function Deck({ deck, decks, setDecks }) {
 
     return () => abortController.abort();
   }
-  
+// console.log(decks);
 
   return (
     
@@ -46,7 +47,7 @@ function Deck({ deck, decks, setDecks }) {
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <h5 className="card-title">{deck.name}</h5>
-          <small>{cardCount} cards</small>
+          <small>{cardLength} cards</small>
         </div>
       
        

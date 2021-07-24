@@ -21,7 +21,10 @@ function Breadcrumbs({ decks }) {
   }
   useEffect(() => {
     const abortController = new AbortController();
-    readDeck(deckId, abortController.signal).then(setDeck).catch(setError);
+    console.log("breadcrumbs", deckId);
+    readDeck(deckId, abortController.signal)
+    .then(setDeck)
+    .catch(setError);
     return () => abortController.abort();
   }, [decks, deckId]);
   const list = subUrls.map((aSubUrl, index) => {

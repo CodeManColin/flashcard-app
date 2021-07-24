@@ -5,20 +5,20 @@ function NextCardButton({
   flip,
   setFlip,
   length,
-  cardNum,
-  setCardNum,
+  cardCount,
+  setCardCount,
   setIsVisible,
 }) {
   const history = useHistory();
 
   function handleOnClick() {
-    if (cardNum < length - 1) {
-      setCardNum(cardNum + 1);
+    if (cardCount < length - 1) {
+      setCardCount(cardCount + 1);
       setFlip(false);
       setIsVisible(false);
     } else {
       if (window.confirm("Restart cards?")) {
-        setCardNum(0);
+        setCardCount(0);
         setIsVisible(false);
       } else {
         history.push("/");

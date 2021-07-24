@@ -11,10 +11,10 @@ function EditDeck({ decks, setDecks, deck, setDeck, deckUrl}) {
       <h2>Edit Deck</h2>
       <EditDeckForm
         deck={deck}
-        setDeck={setDeck}
-        deckUrl={deckUrl}
         decks={decks}
+        setDeck={setDeck}
         setDecks={setDecks}
+        deckUrl={deckUrl}
       />
     </div>
   );

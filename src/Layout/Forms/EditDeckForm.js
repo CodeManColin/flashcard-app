@@ -24,7 +24,8 @@ function EditDeckForm({
       description: description,
       id: params.deckId,
     });
-    //   const { url, params} = useRouteMatch();
+      // const { url, params} = useRouteMatch();
+    
     useEffect(() => {
       setDescription(() => deck.description);
       setName(() => deck.name);
@@ -32,6 +33,7 @@ function EditDeckForm({
     useEffect(() => {
       setTempDeck({ name: name, description: description, id: params.deckId });
     }, [name, description]);
+   
     function submitHandler(event) {
       event.preventDefault();
       console.log(tempDeck);
@@ -43,6 +45,7 @@ function EditDeckForm({
           console.log(error);
         });
     }
+    // console.log("deck.name", deck.name);
     return (
         <form name="editDeck" onSubmit={submitHandler}>
           <div className="form-group">
@@ -52,7 +55,7 @@ function EditDeckForm({
               type="text"
               name="name"
               onChange={handleNameChange}
-              value={name}
+              defaultValue={name}
               className="form-control"
             />
           </div>
