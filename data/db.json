@@ -11,9 +11,19 @@
       "id": 2
     },
     {
+      "name": "Deck Name",
+      "description": "Brief Description",
+      "id": 6
+    },
+    {
+      "name": "NEW DECK",
+      "description": "NEW DECK description",
+      "id": 7
+    },
+    {
       "name": "Mock Deck 3",
-      "description": "Description of Mock Deck 3",
-      "id": 5
+      "description": "Mock Deck 3 stuff",
+      "id": 8
     }
   ],
   "cards": [
@@ -154,6 +164,60 @@
       "back": "A placeholder in the URL using a colon",
       "deckId": 2,
       "id": 26
+    },
+    {
+      "front": "Deck Name 1 - Front",
+      "back": "Deck Name 1 - Back",
+      "deckId": 6,
+      "id": 27
+    },
+    {
+      "front": "Deck Name 2 - Front",
+      "back": "Deck Name 2 -Back",
+      "deckId": 6,
+      "id": 28
+    },
+    {
+      "front": "Deck Name 3 - Front",
+      "back": "Deck Name 3 - Back",
+      "deckId": 6,
+      "id": 29
+    },
+    {
+      "front": "NEW DECK: Add Card 1",
+      "back": "NEW DECK: Add Card 1",
+      "deckId": 7,
+      "id": 30
+    },
+    {
+      "front": "NEW DECK: Add Card 2",
+      "back": "NEW DECK: Add Card 2",
+      "deckId": 7,
+      "id": 31
+    },
+    {
+      "front": "NEW DECK: Add Card 3",
+      "back": " NEW DECK: Add Card 3",
+      "deckId": 7,
+      "id": 32
+    },
+    {
+      "front": "c",
+      "back": "c",
+      "deckId": 8,
+      "id": 33
+    },
+    {
+      "front": "cccc",
+      "back": "cccc",
+      "deckId": 8,
+      "id": 34
+    },
+    {
+      "front": "ccccccccccccc",
+      "back": "ccccccccccccc",
+      "deckId": 8,
+      "id": 35
     }
   ]
 }

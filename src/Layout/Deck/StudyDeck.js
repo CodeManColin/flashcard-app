@@ -1,33 +1,82 @@
-import React, {Fragment} from "react";
+import React from "react";
 
-import StudyCard from '../Cards/StudyCard'
-import Breadcrumbs from "../Breadcrumbs"
+import BreadCrumb from "../BreadCrumb";
+import StudyCard from "../Card/StudyCard";
 
+export default function StudyDeck({ decks, deck, cards }) {
+  let cardAmount = cards.length;
+  //  let tempCards = [...cards];
+  // if (deck.cards != undefined) {
+  //   tempCards = deck.cards;
+  // }
 
-function StudyDeck({ cards }) {
-
-  const cardTotal = cards.length;
-
+  // const [cards, setCards] = useState([...tempCards]);
+  // const deckId = deck.id;
+  // if (deck.cards != undefined) {
+  //   cardAmount = deck.cards.length;
+  // } else {
+  //   cardAmount = 0;
+  // }
+  // useEffect(() => {
+  //   const abortController = new AbortController();
+  //   // listCards(deckId, abortController.signal)
+  //   //   .then(setCards)
+  //   //   .then(() => {
+  //   //     cardAmount = cards.length;
+  //   //   })
+  //   //   .catch(console.log("bad magnitude 10"));
+  //   cardAmount = cards.length;
+  //   return () => abortController.abort();
+  // }, [cards]);
   return (
-    <Fragment>
-     
-      <Breadcrumbs />
-   
-      {cardTotal > 2 ? (
-        <StudyCard cards={cards}/>
+    <div>
+      <BreadCrumb decks={decks} />
+      <h2> {deck.name}: Study</h2>
+
+      {cardAmount > 2 ? (
+        <StudyCard cards={cards} />
       ) : (
-        <div> 
-         <h2>Not Enough Cards.</h2>
-          <h6>
-            You need at least 3 cards to study. There are {cardTotal} cards in
+        <div>
+          <h3>Not Enough Cards.</h3>
+          <p>
+            You need at least 3 cards to study. There are {cardAmount} cards in
             this deck
-          </h6> 
-          </div>
-          )} 
-       
-    </Fragment>
-  )
+          </p>
+        </div>
+      )}
+    </div>
+  );
 }
+// import React, {Fragment} from "react";
+
+// import StudyCard from '../Cards/StudyCard'
+// import Breadcrumbs from "../BreadCrumb"
 
 
-export default StudyDeck;
+// function StudyDeck({ cards }) {
+
+//   const cardTotal = cards.length;
+
+//   return (
+//     <Fragment>
+     
+//       <Breadcrumbs />
+   
+//       {cardTotal > 2 ? (
+//         <StudyCard cards={cards}/>
+//       ) : (
+//         <div> 
+//          <h2>Not Enough Cards.</h2>
+//           <h6>
+//             You need at least 3 cards to study. There are {cardTotal} cards in
+//             this deck
+//           </h6> 
+//           </div>
+//           )} 
+       
+//     </Fragment>
+//   )
+// }
+
+
+// export default StudyDeck;

@@ -1,25 +1,46 @@
-import React from 'react'
+import React from "react";
 
-import Breadcrumbs from '../Breadcrumbs'
-import EditDeckForm from '../Forms/EditDeckForm'
+import BreadCrumb from "../BreadCrumb";
+import EditDeckForm from "../Forms/EditDeckForm";
 
-function EditDeck({ decks, setDecks, deck, setDeck, deckUrl}) {
-
+export default function EditDeck({ decks, deck, setDeck, deckUrl, setDecks }) {
   return (
     <div>
-      <Breadcrumbs decks={decks} />
+      <BreadCrumb decks={decks} />
       <h2>Edit Deck</h2>
       <EditDeckForm
         deck={deck}
-        decks={decks}
         setDeck={setDeck}
-        setDecks={setDecks}
         deckUrl={deckUrl}
+        decks={decks}
+        setDecks={setDecks}
       />
     </div>
   );
 }
 
+// import React from 'react'
+
+// import Breadcrumbs from '../BreadCrumb'
+// import EditDeckForm from '../Forms/EditDeckForm'
+
+// function EditDeck({ decks, setDecks, deck, setDeck, deckUrl}) {
+
+//   return (
+//     <div>
+//       <Breadcrumbs decks={decks} />
+//       <h2>Edit Deck</h2>
+//       <EditDeckForm
+//         deck={deck}
+//         decks={decks}
+//         setDeck={setDeck}
+//         setDecks={setDecks}
+//         deckUrl={deckUrl}
+//       />
+//     </div>
+//   );
+// }
 
 
-export default EditDeck;
+
+// export default EditDeck;
