@@ -7,7 +7,7 @@ import CreateDeckButton from "./CreateDeckButton";
 import Deck from "./Deck";
 import { listDecks } from "../../utils/api/index";
 
-export default function DeckList({ decks, setDecks }) {
+function DeckList({ decks, setDecks }) {
   const [error, setError] = useState(undefined);
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function DeckList({ decks, setDecks }) {
   );
 }
 
+export default DeckList;
 
 // import React, { useEffect, useState } from "react";
 

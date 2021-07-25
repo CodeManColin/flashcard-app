@@ -6,15 +6,16 @@ import DeckView from "./DeckView";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 // import Deck from "./Deck";
 // import { listDecks} from "../../utils/api/index"
-import BreadCrumb from "../BreadCrumb";
+
 import { readDeck } from "../../utils/api";
 import CardList from "../Card/CardList";
 import StudyDeck from "./StudyDeck";
 import EditDeck from "./EditDeck";
 import CreateCard from "../Card/CreateCard";
 import EditCard from "../Card/EditCard";
+import BreadCrumb from "../BreadCrumb";
 
-export default function ViewDeck({ decks, setDecks }) {
+function ViewDeck({ decks, setDecks }) {
   const [deck, setDeck] = useState({});
   const { path, url, params } = useRouteMatch();
 
@@ -95,6 +96,8 @@ export default function ViewDeck({ decks, setDecks }) {
     </div>
   );
 }
+
+export default ViewDeck;
 
 // import React, { useState, useEffect, Fragment } from "react";
 // import { Route, Switch, useParams, useRouteMatch } from "react-router-dom";

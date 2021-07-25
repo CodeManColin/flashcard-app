@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "jshint": "^2.13.0",
     "json-server": "^0.16.1"
   }
 }

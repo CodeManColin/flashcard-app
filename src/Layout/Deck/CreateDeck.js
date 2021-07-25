@@ -4,7 +4,7 @@ import BreadCrumb from "../BreadCrumb";
 
 import CreateDeckForm from "../Forms/CreateDeckForm";
 
-export default function CreateDeck({ decks, setDecks }) {
+function CreateDeck({ decks, setDecks }) {
   return (
     <div>
       <BreadCrumb decks={decks} />
@@ -20,6 +20,8 @@ export default function CreateDeck({ decks, setDecks }) {
     </div>
   );
 }
+
+export default CreateDeck;
 
 // import React from 'react'
 

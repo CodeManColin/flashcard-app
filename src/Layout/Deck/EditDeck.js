@@ -3,7 +3,7 @@ import React from "react";
 import BreadCrumb from "../BreadCrumb";
 import EditDeckForm from "../Forms/EditDeckForm";
 
-export default function EditDeck({ decks, deck, setDeck, deckUrl, setDecks }) {
+function EditDeck({ decks, deck, setDeck, deckUrl, setDecks }) {
   return (
     <div>
       <BreadCrumb decks={decks} />
@@ -18,6 +18,8 @@ export default function EditDeck({ decks, deck, setDeck, deckUrl, setDecks }) {
     </div>
   );
 }
+
+export default EditDeck;
 
 // import React from 'react'
 

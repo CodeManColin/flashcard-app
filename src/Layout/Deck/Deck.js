@@ -6,7 +6,7 @@ import { deleteDeck } from "../../utils/api/index";
 import { Link, useHistory } from "react-router-dom";
 //import { listDecks} from "../../utils/api/index"
 
-export default function Deck({ deck, decks, setDecks }) {
+function Deck({ deck, decks, setDecks }) {
   let length = 0;
   const history = useHistory();
   if (deck.cards !== undefined) {
@@ -23,8 +23,10 @@ export default function Deck({ deck, decks, setDecks }) {
           setDecks(() => tempDecks);
           history.push(`/`);
         })
-        .catch(console.log("Bad magnitude 10"));
-    }
+        .catch((error) => {
+          console.log(error);
+        });
+      }
 
     return () => abortController.abort();
   }
@@ -60,6 +62,7 @@ export default function Deck({ deck, decks, setDecks }) {
   );
 }
 
+export default Deck;
 
 // import React from "react";
 // import { Link, useHistory } from "react-router-dom";

@@ -8,7 +8,7 @@ import {
     // useRouteMatch,
   } from "react-router-dom";
 
-export default function CreateDeckButton () 
+function CreateDeckButton () 
 {
     return (
         <Link to="/decks/new" className="btn btn-secondary oi oi-plus" >
@@ -16,6 +16,8 @@ export default function CreateDeckButton ()
         </Link>
     )
 }
+
+export default CreateDeckButton;
 
 // import React from 'react'
 // import {Link} from "react-router-dom";

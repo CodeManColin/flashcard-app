@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import { deleteDeck } from "../../utils/api/index";
 
-export default function DeckView({ deck, url, decks, setDecks }) {
+function DeckView({ deck, url, decks, setDecks }) {
   const history = useHistory();
   function onClick(event) {
     const abortController = new AbortController();
@@ -54,6 +54,9 @@ export default function DeckView({ deck, url, decks, setDecks }) {
     </div>
   );
 }
+
+export default DeckView;
+
 
 // import React from 'react'
 // import { Link, useHistory } from 'react-router-dom'

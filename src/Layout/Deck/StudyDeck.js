@@ -1,33 +1,11 @@
 import React from "react";
 
-import BreadCrumb from "../BreadCrumb";
 import StudyCard from "../Card/StudyCard";
+import BreadCrumb from "../BreadCrumb";
 
-export default function StudyDeck({ decks, deck, cards }) {
+function StudyDeck({ decks, deck, cards }) {
   let cardAmount = cards.length;
-  //  let tempCards = [...cards];
-  // if (deck.cards != undefined) {
-  //   tempCards = deck.cards;
-  // }
-
-  // const [cards, setCards] = useState([...tempCards]);
-  // const deckId = deck.id;
-  // if (deck.cards != undefined) {
-  //   cardAmount = deck.cards.length;
-  // } else {
-  //   cardAmount = 0;
-  // }
-  // useEffect(() => {
-  //   const abortController = new AbortController();
-  //   // listCards(deckId, abortController.signal)
-  //   //   .then(setCards)
-  //   //   .then(() => {
-  //   //     cardAmount = cards.length;
-  //   //   })
-  //   //   .catch(console.log("bad magnitude 10"));
-  //   cardAmount = cards.length;
-  //   return () => abortController.abort();
-  // }, [cards]);
+  
   return (
     <div>
       <BreadCrumb decks={decks} />
@@ -47,6 +25,9 @@ export default function StudyDeck({ decks, deck, cards }) {
     </div>
   );
 }
+
+export default StudyDeck;
+
 // import React, {Fragment} from "react";
 
 // import StudyCard from '../Cards/StudyCard'

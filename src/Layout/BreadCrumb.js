@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import { readDeck } from "../utils/api";
 //import { listDecks} from "./utils/api/index"
 
-export default function BreadCrumb({ decks }) {
+function BreadCrumb({ decks }) {
   const [deck, setDeck] = useState({});
   const { url, params } = useRouteMatch();
   const [error, setError] = useState(undefined);
@@ -23,7 +23,9 @@ export default function BreadCrumb({ decks }) {
   }
   useEffect(() => {
     const abortController = new AbortController();
-    readDeck(deckId, abortController.signal).then(setDeck).catch(setError);
+    readDeck(deckId, abortController.signal)
+      .then(setDeck)
+      .catch(setError);
     return () => abortController.abort();
   }, [decks, deckId]);
   const list = subUrls.map((aSubUrl, index) => {
@@ -101,6 +103,7 @@ export default function BreadCrumb({ decks }) {
   );
 }
 
+export default BreadCrumb;
 
 // import React, { useEffect, useState } from "react";
 // import { Link, useRouteMatch } from "react-router-dom";
