@@ -17,7 +17,9 @@ function DeckView({ deck, url, decks, setDecks }) {
           setDecks(() => tempDecks);
           history.push(`/`);
         })
-        .catch(console.log("Bad magnitude 10"));
+        .catch((error) => {
+          console.log(error);
+        });
     }
 
     return () => abortController.abort();
