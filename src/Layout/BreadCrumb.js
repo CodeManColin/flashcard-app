@@ -5,8 +5,9 @@ import { readDeck } from "../utils/api";
 //import { listDecks} from "./utils/api/index"
 
 function BreadCrumb({ decks }) {
-  const [deck, setDeck] = useState({});
   const { url, params } = useRouteMatch();
+
+  const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);
   const subUrls = url.split(`/`);
   //console.log(useRouteMatch());

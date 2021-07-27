@@ -24,8 +24,10 @@ export default function CardForm({
       setEdit(true);
       readCard(subUrls[subUrls.length - 2])
         .then(setFormData)
-        .catch(console.log("Bad magnitude 10"));
-    }
+        .catch((error) => {
+          console.log(error);
+        });
+      }
   }, []);
 
   function handleChange({ target }) {
@@ -68,7 +70,9 @@ export default function CardForm({
         }
         // if edit got to view screen
       })
-      .catch(console.log("Bad magnitude 10"));
+      .catch((error) => {
+        console.log(error);
+      });
     return () => abortController.abort();
   }
   return (

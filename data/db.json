@@ -6,28 +6,12 @@
       "id": 1
     },
     {
-      "name": "DECK 2",
-      "description": "DECK 2 description",
-      "id": 2
-    },
-    {
-      "name": "DECK 3",
-      "description": "DECK 3 description",
-      "id": 3
-    },
-    {
-      "name": "DECK 4",
-      "description": "DECK 4 description",
-      "id": 4
+      "name": "DECK 7",
+      "description": "DECK 7 description",
+      "id": 7
     }
   ],
   "cards": [
-    {
-      "front": "DECK 1 - CARD A",
-      "back": "DECK 1 - CARD A",
-      "deckId": 1,
-      "id": 1
-    },
     {
       "front": "DECK 1 - CARD B",
       "back": "DECK 1 - CARD B",
@@ -35,64 +19,22 @@
       "id": 2
     },
     {
-      "front": "DECK 1 - CARD C",
-      "back": "DECK 1 - CARD C",
-      "deckId": 1,
-      "id": 3
+      "front": "DECK 7 - CARD A",
+      "back": "DECK 7 - CARD A",
+      "deckId": 7,
+      "id": 20
     },
     {
-      "front": "DECK 2 - CARD A",
-      "back": "DECK 2 - CARD A",
-      "deckId": 2,
-      "id": 4
+      "front": "DECK 7 - CARD B",
+      "back": "DECK 7 - CARD B",
+      "deckId": 7,
+      "id": 21
     },
     {
-      "front": "DECK 2 - CARD B",
-      "back": "DECK 2 - CARD B",
-      "deckId": 2,
-      "id": 5
-    },
-    {
-      "front": "DECK 2 - CARD C",
-      "back": "DECK 2 - CARD C",
-      "deckId": 2,
-      "id": 6
-    },
-    {
-      "front": "DECK 3 - CARD A",
-      "back": "DECK 3 - CARD A",
-      "deckId": 3,
-      "id": 7
-    },
-    {
-      "front": "DECK 3 - CARD B",
-      "back": "DECK 3 - CARD B",
-      "deckId": 3,
-      "id": 8
-    },
-    {
-      "front": "DECK 3 - CARD C",
-      "back": "DECK 3 - CARD C",
-      "deckId": 3,
-      "id": 9
-    },
-    {
-      "front": "DECK 4 - CARD A",
-      "back": "DECK 4 - CARD A",
-      "deckId": 4,
-      "id": 10
-    },
-    {
-      "front": "DECK 4 - CARD B",
-      "back": "DECK 4 - CARD B",
-      "deckId": 4,
-      "id": 11
-    },
-    {
-      "front": "DECK 4 - CARD C",
-      "back": "DECK 4 - CARD C",
-      "deckId": 4,
-      "id": 12
+      "front": "DECK 7 - CARD C",
+      "back": "DECK 7 - CARD C",
+      "deckId": 7,
+      "id": 22
     }
   ]
 }

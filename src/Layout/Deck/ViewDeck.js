@@ -34,8 +34,10 @@ function ViewDeck({ decks, setDecks }) {
       .then(() => {
         if (deck.cards !== undefined) setCards([...deck.cards]);
       })
-      .catch(console.log("bad"));
-
+      .catch((error) => {
+        console.log(error);
+      });
+      
     return () => abortController.abort();
   }, []);
   useEffect(() => {
