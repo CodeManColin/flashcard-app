@@ -19,8 +19,8 @@ export default function CardView({ card: { id, front, back }, deck, setDeck }) {
             return { ...deck, cards: filteredCards };
           });
         })
-        .catch((e) => {
-          console.log(e);
+        .catch((error) => {
+          console.log(error);
         });
     }
   }

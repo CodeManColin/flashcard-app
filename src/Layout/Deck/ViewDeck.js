@@ -11,7 +11,7 @@ import { readDeck } from "../../utils/api";
 import CardList from "../Card/CardList";
 import StudyDeck from "./StudyDeck";
 import EditDeck from "./EditDeck";
-import CreateCard from "../Card/CreateCard";
+import AddCard from "../Card/AddCard";
 import EditCard from "../Card/EditCard";
 import BreadCrumb from "../BreadCrumb";
 
@@ -55,7 +55,7 @@ function ViewDeck({ decks, setDecks }) {
           />
         </Route>
         <Route path={`${path}/cards/new`}>
-          <CreateCard
+          <AddCard
             decks={decks}
             deck={deck}
             setDeck={setDeck}

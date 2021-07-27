@@ -1,11 +1,11 @@
 import React from "react";
 
 import BreadCrumb from "../BreadCrumb";
-import CardForm from "../Forms/CardForm";
+import AddCardForm from "../Forms/AddCardForm";
 /**
  * parent create card component
  */
-export default function CreateCard({
+export default function AddCard({
   decks,
   deck,
   setDeck,
@@ -18,7 +18,7 @@ export default function CreateCard({
     <div>
       <BreadCrumb decks={decks} />
       <h2>{deck.name}: Add Card</h2>
-      <CardForm
+      <AddCardForm
         deck={deck}
         setDeck={setDeck}
         deckUrl={deckUrl}

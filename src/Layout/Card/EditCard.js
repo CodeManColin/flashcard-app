@@ -1,7 +1,7 @@
 import React from "react";
 
 import BreadCrumb from "../BreadCrumb";
-import CardForm from "../Forms/CardForm";
+import AddCardForm from "../Forms/AddCardForm";
 
 export default function EditCard({
   decks,
@@ -16,7 +16,7 @@ export default function EditCard({
     <div>
       <BreadCrumb decks={decks} />
       <h2>Edit Card</h2>
-      <CardForm
+      <AddCardForm
         deck={deck}
         setDeck={setDeck}
         deckUrl={deckUrl}
