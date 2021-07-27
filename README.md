@@ -1,5 +1,19 @@
 Flashcard App "The Flash-O-Matic!"
 
+Tools used: 
+
+-React
+
+-JavaScript
+
+-HTML
+
+-CSS
+
+-Bootstrap
+
+-GIT
+
 This project was designed to test the ability to work with rendering and state management using React. 
 More specifcally it involved:
 
