@@ -10,37 +10,10 @@ function CreateDeck({ decks, setDecks }) {
       <BreadCrumb decks={decks} />
       <h2>Create Deck</h2>
       <CreateDeckForm decks={decks} setDecks={setDecks} />
-      {/* <EditDeckForm
-        deck={deck}
-        setDeck={setDeck}
-        deckUrl={deckUrl}
-        decks={decks}
-        setDecks={setDecks}
-      /> */}
     </div>
   );
 }
 
 export default CreateDeck;
-
-// import React from 'react'
-
-// import Breadcrumbs from '../Breadcrumbs'
-// import CreateDeckForm from '../Forms/CreateDeckForm'
-
-
-// function CreateDeck({ decks, setDecks }) {
-//     // console.log(decks);
-//   return (
-//     <div>
-//       <Breadcrumbs decks={decks} />
-//       <h2>Create Deck</h2>
-//       <CreateDeckForm decks={decks} setDecks={setDecks} />
-//     </div>
-//   );
-//     }
-
-// export default CreateDeck;
-
 
 
