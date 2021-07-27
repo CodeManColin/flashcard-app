@@ -2,6 +2,7 @@ Flashcard App "The Flash-O-Matic!"
 
 This project was designed to test the ability to work with rendering and state management using React. 
 More specifcally it involved:
+
 -Installing packages via NPM
 -Running tests from the command line
 -Writing React function components
